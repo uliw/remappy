@@ -35,7 +35,7 @@ fqfn: pl.Path = pl.Path(f"{cwd}/{fn}")  # fully qualified file name
 if not fqfn.exists():  # check if file exist
     raise FileNotFoundError(f"Cannot find file {fn}")
 
-# run remap and returne results as dataframe
+# run remap and return results as dataframe
 df: pd.DataFrame = remap.run_remap(str(fname))
 ```
 
