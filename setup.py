@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="remappy",  
-    version="0.0.0.1",
+    version="0.0.0.2",
     author="Ulrich G. Wortmann",
     license="GPL-3.0-or-later",
     author_email="uli.wortmann@utoronto.ca",
@@ -16,6 +16,8 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/uliw/remappy",
     packages=setuptools.find_packages(),
+    package_data={'': ['remap_lib01.m', 'start_remap.m']},
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
