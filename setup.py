@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="remappy",  
-    version="0.0.0.2",
+    version="0.0.0.4",
     author="Ulrich G. Wortmann",
     license="GPL-3.0-or-later",
     author_email="uli.wortmann@utoronto.ca",

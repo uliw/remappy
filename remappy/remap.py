@@ -48,7 +48,7 @@ def run_remap(infile: pathlib.Path)-> pd.DataFrame:
 
     # set the path where the remap_lib and start remap files live
     ip = site.getsitepackages()[0]
-    octave.addpath(f"{ip}/remap/")
+    octave.addpath(f"{ip}/remappy/")
     
     # call the remap solver
     [c, conc, r, v, par] = octave.start_remap(str(infile), nout=5)

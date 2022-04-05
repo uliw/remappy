@@ -44,9 +44,11 @@ def run_remap(infile: pathlib.Path)-> pd.DataFrame:
     """
     from oct2py import octave
     import pandas as pd
+    import site
 
     # set the path where the remap_lib and start remap files live
-    octave.addpath("/home/uliw/user/python-scripts/remap/")
+    ip = site.getsitepackages()[0]
+    octave.addpath(f"{ip}/remappy/")
     
     # call the remap solver
     [c, conc, r, v, par] = octave.start_remap(str(infile), nout=5)
