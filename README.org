@@ -32,7 +32,7 @@ The original program was written as matlab program. Remappy provides a python wr
 
  - remap.py: This behaves similar to the original remap but provides extended command-line parsing options, run =remap.py --help= for details
  - you can also import the library and use it inside of your own python code
-#+BEGIN_SRC ipython
+#+BEGIN_SRC python
 import remap
 import pathlib as pl
 import pandas as pd
@@ -46,7 +46,7 @@ if not fqfn.exists():  # check if file exist
 df: pd.DataFrame = remap.run_remap(str(fname))
 #+END_SRC
  - or use the =oct2py= interface directly
-#+BEGIN_SRC ipython
+#+BEGIN_SRC python
 from oct2py import octave
 
 octave.addpath("/path/to/remap.m")
