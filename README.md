@@ -2,7 +2,10 @@
 
 ## Overview
 
-REMAP (Chernyavsky & Wortmann, 2007, <10.1029/2006GC001442>) provides an easy to use interface for 1-dimensional reaction-transport modeling in porous media, and provides explicit support for kinetic stable isotope fractionation calculations. 
+REMAP (Chernyavsky & Wortmann, 2007, DOI 10.1029/2006GC001442)
+provides an easy to use interface for 1-dimensional reaction-transport
+modeling in porous media, and provides explicit support for kinetic
+stable isotope fractionation calculations.
 
 The original program was written as matlab program. Remappy provides a python wrapper to the original code which can be run via `oct2py`. 
 
