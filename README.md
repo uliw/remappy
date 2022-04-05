@@ -11,6 +11,13 @@ The original program was written as matlab program. Remappy provides a python wr
 -   March 30<sup>th</sup>: Initial release
 
 
+## Installation
+
+-   `pip install remappy` will install all necessary files and dependencies
+-   you can now import remap into your python code (see below)
+-   to run remap as standalone application, you need to follow your os specific instructions to create an executable python program. On linux, it is sufficient to link `remap.py` to a directory which is in your path (often `/usr/local/bin/`) and set is a executable. Tools like <https://datatofish.com/executable-pyinstaller/> will also work on Mac and Windows.
+
+
 ## Usage
 
 -   remap.py: This behaves similar to the original remap but provides extended command-line parsing options, run `remap.py --help` for details
@@ -34,6 +41,8 @@ df: pd.DataFrame = remap.run_remap(str(fname))
 
 ```python
 from oct2py import octave
+<<<<<<< HEAD
+=======
 
 octave.addpath("/path/to/remap.m")
 
@@ -41,13 +50,22 @@ fn = "hg.rmp"  # name of remap configuration file
 # call remap
 [c, conc, r, v, par] = octave.start_remap(fn, nout=5)
 ```
+>>>>>>> origin/main
 
+octave.addpath("/path/to/remap.m")
 
+<<<<<<< HEAD
+fn = "hg.rmp"  # name of remap configuration file
+# call remap
+[c, conc, r, v, par] = octave.start_remap(fn, nout=5)
+```
+=======
 ## Installation
 
 -   `pip install remappy` will install all necessary files and dependencies
 -   you can now import remap into your python code
 -   to run remap as standalone application, you need to follow your os specific instructions (see e.g., <https://datatofish.com/executable-pyinstaller/>). On linux, it is sufficient to link `remap.py` to a directory which is in your path (often `/usr/local/bin/`) and set is a executable, otherwise, see above.
+>>>>>>> origin/main
 
 
 # Documentation
