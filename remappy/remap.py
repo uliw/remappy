@@ -7,9 +7,11 @@ Copyright 2022, Uli Wortmann, uli.wortmann@utoronto.ca
 
 """
 from __future__ import annotations
+import numpy as np
+import pandas as pd
 
 
-def get_delta(r: float, conc: nd.array, a: int, b: int) -> float:
+def get_delta(r: float, conc: np.array, a: int, b: int) -> float:
     """Calculate delta values from total concentration and concentration of the
     light isotope
 
@@ -84,7 +86,7 @@ if __name__ == "__main__":
     import argparse
     import matplotlib.pyplot as plt
     import pandas as pd
-    import plot_it
+    from remappy import plot_it
 
     # --------------------------- setup cmd line parsing with argparse ------------------ #
     parser = argparse.ArgumentParser(

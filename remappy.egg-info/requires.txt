@@ -1,5 +1,0 @@
-numpy
-pandas
-matplotlib
-pathlib
-oct2py
