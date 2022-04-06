@@ -1,3 +1,4 @@
 *~undo-tree~
 package.sh
-
+*_pycache__
+.gitignore
