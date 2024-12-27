@@ -31,8 +31,9 @@ def get_delta(r: float, conc: np.array, a: int, b: int) -> float:
     )
     return d
 
-def run_remap(infile: pathlib.Path)-> pd.DataFrame:
-    """ This function starts the octace process and rusn the
+
+def run_remap(infile: pathlib.Path) -> pd.DataFrame:
+    """This function starts the octace process and rusn the
     start_remap.m script.
 
     infile:  A fully qualified file name of pathlib object
@@ -51,7 +52,7 @@ def run_remap(infile: pathlib.Path)-> pd.DataFrame:
     # set the path where the remap_lib and start remap files live
     ip = site.getsitepackages()[0]
     octave.addpath(f"{ip}/remappy/")
-    
+
     # call the remap solver
     [c, conc, r, v, par] = octave.start_remap(str(infile), nout=5)
 
@@ -78,6 +79,7 @@ def run_remap(infile: pathlib.Path)-> pd.DataFrame:
         df["Precipitate d"] = np.zeros(int(c.imax)) * np.nan
 
     return df
+
 
 if __name__ == "__main__":
     import numpy as np
